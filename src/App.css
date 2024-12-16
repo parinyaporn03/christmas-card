@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Mountains+of+Christmas:wght@400;700&family=Sriracha&family=Taviraj&display=swap");
+
+.frontcard {
+  background: repeating-linear-gradient(
+    45deg,
+    #349546,
+    #349546 10px,
+    #ffff 10px,
+    #ffff 20px
+  );
+}
+.backcard {
+  background: repeating-linear-gradient(
+    45deg,
+    #9f0706,
+    #9f0706 10px,
+    #ffff 10px,
+    #ffff 20px
+  );
+}
+.cloud {
+  aspect-ratio: 1.8;
+  --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
+  mask: var(--g) 100% 100%/30% 60%, var(--g) 70% 0/50% 100%,
+    var(--g) 0 100%/36% 68%, var(--g) 27% 18%/26% 40%,
+    linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+}
+.star {
+  width: 300px;
+  aspect-ratio: 1;
+  background: #f8ca00;
+  clip-path: polygon(
+    50% 0,
+    calc(50% * (1 + sin(0.4turn))) calc(50% * (1 - cos(0.4turn))),
+    calc(50% * (1 - sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+    calc(50% * (1 + sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+    calc(50% * (1 - sin(0.4turn))) calc(50% * (1 - cos(0.4turn)))
+  );
+  /* or more simple
+  clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%); 
+   */
+}
